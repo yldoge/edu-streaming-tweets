@@ -1,60 +1,12 @@
-2023-11-01 18:05:10 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.8.1 with PID 3373 (/Users/yldog/Projects/edu-streaming-tweets/twitter-to-kafka-service/target/classes started by yldog in /Users/yldog/Projects/edu-streaming-tweets)
-2023-11-01 18:05:10 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-11-01 18:05:10 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.298 seconds (process running for 0.521)
-2023-11-01 18:05:10 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
-2023-11-01 18:05:10 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-11-01 18:07:18 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.8.1 with PID 3391 (/Users/yldog/Projects/edu-streaming-tweets/twitter-to-kafka-service/target/classes started by yldog in /Users/yldog/Projects/edu-streaming-tweets)
-2023-11-01 18:07:18 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-11-01 18:07:18 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.286 seconds (process running for 0.506)
-2023-11-01 18:07:18 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Hello Event-driven Microservices!
-2023-11-01 18:07:18 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-11-01 19:26:27 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.8.1 with PID 3948 (/Users/yldog/Projects/edu-streaming-tweets/twitter-to-kafka-service/target/classes started by yldog in /Users/yldog/Projects/edu-streaming-tweets)
-2023-11-01 19:26:27 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-11-01 19:26:27 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.287 seconds (process running for 0.514)
-2023-11-01 19:26:27 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
-2023-11-01 19:26:27 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-11-01 19:26:27 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Hello Event-driven Microservices!
-2023-11-01 19:26:27 [main] INFO  c.y.t.t.k.s.r.i.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-11-01 19:26:27 [pool-2-thread-1] ERROR c.y.t.t.k.s.r.i.MockKafkaStreamRunner - Error creating twitter status!
-2023-11-01 19:30:35 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.8.1 with PID 3986 (/Users/yldog/Projects/edu-streaming-tweets/twitter-to-kafka-service/target/classes started by yldog in /Users/yldog/Projects/edu-streaming-tweets)
-2023-11-01 19:30:35 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-11-01 19:30:35 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.35 seconds (process running for 0.891)
-2023-11-01 19:30:35 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
-2023-11-01 19:30:35 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-11-01 19:30:35 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Hello Event-driven Microservices!
-2023-11-01 19:30:35 [main] INFO  c.y.t.t.k.s.r.i.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-11-01 19:33:01 [pool-2-thread-1] ERROR c.y.t.t.k.s.r.i.MockKafkaStreamRunner - Error creating twitter status!
-2023-11-01 19:33:06 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.8.1 with PID 4000 (/Users/yldog/Projects/edu-streaming-tweets/twitter-to-kafka-service/target/classes started by yldog in /Users/yldog/Projects/edu-streaming-tweets)
-2023-11-01 19:33:06 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-11-01 19:33:06 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.291 seconds (process running for 0.515)
-2023-11-01 19:33:06 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
-2023-11-01 19:33:06 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-11-01 19:33:06 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Hello Event-driven Microservices!
-2023-11-01 19:33:06 [main] INFO  c.y.t.t.k.s.r.i.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-11-01 19:33:06 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text blandit sit in nibh Quisque Quisque Kafka amet elit consectetur sit
-2023-11-01 19:33:16 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text adipiscing ipsum adipiscing Pellentesque elit Java turpis sagittis at nunc
-2023-11-01 19:33:26 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text adipiscing ipsum blandit Microservices dolor bibendum
-2023-11-01 19:33:36 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text amet sit Lorem nibh Microservices luctus purus turpis
-2023-11-01 19:33:41 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.8.1 with PID 4007 (/Users/yldog/Projects/edu-streaming-tweets/twitter-to-kafka-service/target/classes started by yldog in /Users/yldog/Projects/edu-streaming-tweets)
-2023-11-01 19:33:41 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-11-01 19:33:41 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.292 seconds (process running for 0.523)
-2023-11-01 19:33:41 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
-2023-11-01 19:33:41 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-11-01 19:33:41 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Hello Event-driven Microservices!
-2023-11-01 19:33:41 [main] INFO  c.y.t.t.k.s.r.i.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-11-01 19:33:41 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text purus sed nibh blandit elit dolor Spring Pellentesque at elit sit nibh
-2023-11-01 19:33:46 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text sed amet nibh bibendum adipiscing Quisque pharetra in Kafka sit blandit bibendum turpis elit Pellentesque ac
-2023-11-01 19:33:51 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text turpis ipsum adipiscing luctus in Kafka at Pellentesque luctus
-2023-11-01 19:33:56 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text pharetra Lorem blandit dolor Elasticsearch elit blandit
-2023-11-01 19:34:01 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text dolor nunc sagittis purus Quisque luctus in Elasticsearch elit blandit sit dolor pharetra
-2023-11-01 19:34:06 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text sagittis luctus nunc elit Elasticsearch Lorem nibh
-2023-11-01 19:34:11 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text amet nibh pharetra turpis Spring Lorem pharetra ac
-2023-11-01 19:34:16 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text dolor Quisque amet Pellentesque Quisque dolor at Pellentesque Elasticsearch consectetur consectetur sed purus sed sit dolor
-2023-11-01 19:34:21 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text in purus sit blandit at adipiscing Quisque at Elasticsearch amet bibendum Lorem in adipiscing in
-2023-11-01 19:34:26 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text purus sed sed Quisque consectetur Elasticsearch bibendum luctus consectetur pharetra
-2023-11-01 19:34:31 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text dolor sed Pellentesque consectetur sit nibh Kafka ac Lorem sagittis turpis pharetra
-2023-11-01 19:34:36 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text pharetra sit at consectetur luctus Spring in Quisque nunc
-2023-11-01 19:34:41 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text dolor Quisque in amet ac nibh purus Elasticsearch sit amet Quisque dolor pharetra
-2023-11-01 19:34:46 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ipsum dolor elit purus in ipsum elit Kafka Lorem nibh sagittis amet turpis
-2023-11-01 19:34:51 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text at nunc elit nibh Kafka luctus sed nunc
-2023-11-01 19:34:56 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Lorem blandit Lorem dolor in ac Microservices elit ipsum ac sagittis amet
+2023-11-03 17:34:49 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.8.1 with PID 10725 (/Users/yldog/Projects/edu-streaming-tweets/twitter-to-kafka-service/target/classes started by yldog in /Users/yldog/Projects/edu-streaming-tweets)
+2023-11-03 17:34:49 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-03 17:34:49 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.305 seconds (process running for 0.549)
+2023-11-03 17:34:49 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2023-11-03 17:34:49 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-11-03 17:34:49 [main] INFO  c.y.t.t.k.s.TwitterToKafkaServiceApplication - Hello Event-driven Microservices!
+2023-11-03 17:34:49 [main] INFO  c.y.t.t.k.s.r.i.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-11-03 17:34:49 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ipsum amet luctus sed Pellentesque at blandit amet Elasticsearch nunc in bibendum dolor in bibendum
+2023-11-03 17:34:54 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text elit blandit sagittis Kafka elit blandit
+2023-11-03 17:34:59 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text sagittis ac elit sit consectetur luctus bibendum Java luctus sagittis sed consectetur at
+2023-11-03 17:35:04 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ac ipsum elit Lorem Spring Pellentesque bibendum in
+2023-11-03 17:35:09 [pool-2-thread-1] INFO  c.y.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Quisque luctus Quisque ipsum Pellentesque Microservices Pellentesque bibendum sit

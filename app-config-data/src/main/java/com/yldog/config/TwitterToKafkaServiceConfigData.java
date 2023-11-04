@@ -1,4 +1,4 @@
-package com.yldog.twitter.to.kafka.service.config;
+package com.yldog.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

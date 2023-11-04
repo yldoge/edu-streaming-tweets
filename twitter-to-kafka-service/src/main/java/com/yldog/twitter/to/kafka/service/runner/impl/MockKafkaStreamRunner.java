@@ -1,6 +1,6 @@
 package com.yldog.twitter.to.kafka.service.runner.impl;
 
-import com.yldog.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData;
+import com.yldog.config.TwitterToKafkaServiceConfigData;
 import com.yldog.twitter.to.kafka.service.exception.TwitterToKafkaServiceException;
 import com.yldog.twitter.to.kafka.service.listener.TwitterKafkaStatusListener;
 import com.yldog.twitter.to.kafka.service.runner.StreamRunner;
