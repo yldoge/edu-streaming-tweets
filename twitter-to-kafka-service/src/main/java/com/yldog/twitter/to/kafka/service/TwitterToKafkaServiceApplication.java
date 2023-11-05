@@ -1,6 +1,6 @@
 package com.yldog.twitter.to.kafka.service;
 
-import com.yldog.config.TwitterToKafkaServiceConfigData;
+import com.yldog.twitter.to.kafka.service.init.impl.KafkaStreamInitializer;
 import com.yldog.twitter.to.kafka.service.runner.StreamRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,18 +9,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-import java.util.Arrays;
-
 @SpringBootApplication
 @ComponentScan(basePackages = "com.yldog")
 public class TwitterToKafkaServiceApplication implements CommandLineRunner {
     private static final Logger LOG = LoggerFactory.getLogger(TwitterToKafkaServiceApplication.class);
-    private final TwitterToKafkaServiceConfigData configData;
+    private final KafkaStreamInitializer kafkaStreamInitializer;
     private final StreamRunner streamRunner;
 
-    public TwitterToKafkaServiceApplication(TwitterToKafkaServiceConfigData configData,
+    public TwitterToKafkaServiceApplication(KafkaStreamInitializer kafkaStreamInitializer,
                                             StreamRunner streamRunner) {
-        this.configData = configData;
+        this.kafkaStreamInitializer = kafkaStreamInitializer;
         this.streamRunner = streamRunner;
     }
 
@@ -31,8 +29,7 @@ public class TwitterToKafkaServiceApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         LOG.info("App starts...");
-        LOG.info(Arrays.toString(configData.getTwitterKeywords().toArray(new String[0])));
-        LOG.info(configData.getWelcomeMessage());
+        kafkaStreamInitializer.init();
         streamRunner.start();
     }
 }
