@@ -18,3 +18,7 @@ spring:
           password: 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
           default-label: main
       fail-fast: true
+  security:
+    user:
+      name: spring_cloud_user
+      password: springCloudPwd!
