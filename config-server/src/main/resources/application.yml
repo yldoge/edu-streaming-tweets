@@ -1,0 +1,20 @@
+server:
+  port: 8888
+logging:
+  level:
+    root: INFO
+    org.spring.framework.cloud.config: DEBUG
+
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yldoge/edu-streaming-tweets-cloud-config.git
+          clone-on-start: true
+          username: yldoge
+          password: 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
+          default-label: main
+      fail-fast: true
