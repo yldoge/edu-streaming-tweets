@@ -15,7 +15,7 @@ spring:
           uri: https://github.com/yldoge/edu-streaming-tweets-cloud-config.git
           clone-on-start: true
           username: yldoge
-          password: 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
+          password: '{cipher}48b9202df2b43eae7bc1f569faab26f5ad27a722c652ec46a77e94a11483e3c6d865a9b209523641da13c5bd49db47ec64c9f1f4cfadfdef95ef9db76b914a93'
           default-label: main
       fail-fast: true
   security:
