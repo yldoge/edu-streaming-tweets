@@ -13,11 +13,14 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PostAuthorize;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@PreAuthorize("isAuthenticated()")
 @RestController
 @RequestMapping(value = "/documents", produces = "application/vnd.api.v1+json")
 public class ElasticDocumentController {
@@ -27,6 +30,10 @@ public class ElasticDocumentController {
     public ElasticDocumentController(ElasticQueryService elasticQueryService) {
         this.elasticQueryService = elasticQueryService;
     }
+
+    @Value("${server.port}")
+    private String port;
+    // #######################################################################################
     @Operation(summary = "Get all elastic documents.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successful response.", content = {
@@ -36,12 +43,14 @@ public class ElasticDocumentController {
             @ApiResponse(responseCode = "400", description = "Not found."),
             @ApiResponse(responseCode = "500", description = "Internal server error.")
     })
+    @PostAuthorize("hasPermission(returnObject, 'READ')")
     @GetMapping("")
     public @ResponseBody ResponseEntity<List<ElasticQueryServiceResponseModel>> getDocuments() {
         List<ElasticQueryServiceResponseModel> response = elasticQueryService.getAllDocuments();
         LOG.info("Elasticsearch returned {} of documents", response.size());
         return ResponseEntity.ok(response);
     }
+    // #######################################################################################
     @Operation(summary = "Get elastic document by id.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successful response.", content = {
@@ -51,6 +60,7 @@ public class ElasticDocumentController {
             @ApiResponse(responseCode = "400", description = "Not found."),
             @ApiResponse(responseCode = "500", description = "Internal server error.")
     })
+    @PreAuthorize("hasPermission(#id, 'ElasticQueryServiceReponseModel', 'READ')")
     @GetMapping(value = "/{id}")
     public @ResponseBody ResponseEntity<ElasticQueryServiceResponseModel>
     getDocumentById(@PathVariable @NotEmpty String id) {
@@ -59,6 +69,7 @@ public class ElasticDocumentController {
         LOG.info("Elasticsearch returned document with id {}", id);
         return ResponseEntity.ok(elasticQueryServiceResponseModel);
     }
+    // #######################################################################################
     @Operation(summary = "Get elastic document by id.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successful response.", content = {
@@ -76,6 +87,7 @@ public class ElasticDocumentController {
         LOG.info("Elasticsearch returned document with id {}", id);
         return ResponseEntity.ok(getV2Model(elasticQueryServiceResponseModel));
     }
+    // #######################################################################################
     @Operation(summary = "Get elastic document by text.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successful response.", content = {
@@ -85,6 +97,8 @@ public class ElasticDocumentController {
             @ApiResponse(responseCode = "400", description = "Not found."),
             @ApiResponse(responseCode = "500", description = "Internal server error.")
     })
+    @PreAuthorize("hasRole('APP_USER_ROLE') || hasRole('APP_SUPER_USER_ROLE') || hasAuthority('SCOPE_APP_USER_ROLE')")
+    @PostAuthorize("hasPermission(returnObject, 'READ')")
     @PostMapping("/get-document-by-text")
     public @ResponseBody ResponseEntity<List<ElasticQueryServiceResponseModel>>
     getDocumentByText(@RequestBody @Valid ElasticQueryServiceRequestModel elasticQueryServiceRequestModel) {
@@ -93,7 +107,7 @@ public class ElasticDocumentController {
         LOG.info("Elasticsearch returned {} of documents", response.size());
         return ResponseEntity.ok(response);
     }
-
+    // #######################################################################################
     private ElasticQueryServiceResponseModelV2 getV2Model(ElasticQueryServiceResponseModel responseModel) {
         ElasticQueryServiceResponseModelV2 responseModelV2 = ElasticQueryServiceResponseModelV2.builder()
                 .id(Long.parseLong(responseModel.getId()))

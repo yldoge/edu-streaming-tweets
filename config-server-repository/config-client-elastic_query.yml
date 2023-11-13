@@ -1,10 +1,37 @@
 elastic-query-service:
   version: v1
+  custom-audience: elastic-query-service
 
 server:
   port: 8183
   servlet:
     context-path: /elastic-query-service
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8081/realms/streaming-tweets-realm
+          jwk-set-uri: http://localhost:8081/realms/streaming-tweets-realm/protocol/openid-connect/certs
+  jpa:
+    open-in-view: false
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:postgresql://localhost:5432/keycloak?currentSchema=keycloak&binaryTransfer=true&reWriteBatchedInserts=true
+    username: keycloak
+    password: '{cipher}a07fc06b4fcc628ac840b1a9f5f9455c3cd55755cbdae8b2e1c7381e9b0f9b21'
+    driver-class-name: org.postgresql.Driver
+    platform: postgres
+#    schema: classpath:schema-postgres.sql
+#    data: classpath:data-postgres.sql
+    initialization-mode: always
 
 elastic-query-config:
   text-field: text
