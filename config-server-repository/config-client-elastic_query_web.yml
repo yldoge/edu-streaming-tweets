@@ -20,6 +20,23 @@ elastic-query-web-client:
 spring:
   thymeleaf:
     cache: false
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: 'elastic-query-web-client'
+            client-secret: '{cipher}37825a7ba8104b5affe4fd4ed0fc3589bbe04266c26a42ce0b16f5d59d2560f5e1c42f4e495d9b10957a5afba56ebb9a23b22e0383bcf03728cb4843607e45e4'
+            authorization-grant-type: authorization_code
+            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+            scope: openid
+        provider:
+          keycloak:
+            issuerUri: http://localhost:8081/realms/streaming-tweets-realm
+
+security:
+  logout-success-url: http://localhost:8184/elastic-query-web-client
+  default-client-registration-id: keycloak
 
 user-config:
   username: test

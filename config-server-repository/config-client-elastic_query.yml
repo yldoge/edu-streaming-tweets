@@ -24,7 +24,7 @@ spring:
     hibernate:
       ddl-auto: none
   datasource:
-    url: jdbc:postgresql://localhost:5432/keycloak?currentSchema=keycloak&binaryTransfer=true&reWriteBatchedInserts=true
+    url: jdbc:postgresql://localhost:5432/keycloak?currentSchema=public&binaryTransfer=true&reWriteBatchedInserts=true
     username: keycloak
     password: '{cipher}a07fc06b4fcc628ac840b1a9f5f9455c3cd55755cbdae8b2e1c7381e9b0f9b21'
     driver-class-name: org.postgresql.Driver
